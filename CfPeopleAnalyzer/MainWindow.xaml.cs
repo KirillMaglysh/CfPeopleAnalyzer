@@ -18,11 +18,12 @@ namespace CfPeopleAnalyzer
 
         private void DownloadData(object sender, RoutedEventArgs e)
         {
-            new Thread(() => new CfParser().ParseWebSiteAsync()).Start();
+            new Thread(() => new CfParserApi().ParseWebSiteAsync()).Start();
         }
 
         private void OpenStats(object sender, RoutedEventArgs e)
         {
+            new StatsWindow().Show();
         }
     }
 }
